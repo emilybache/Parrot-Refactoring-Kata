@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": [
+            "Parrot\\": [
                 "src",
                 "tests"
             ]
