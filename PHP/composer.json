@@ -1,0 +1,24 @@
+{
+    "name": "luisrovirosa/parrot-refactoring",
+    "description": "Kata to practice Pol(l)ymorphism",
+    "authors": [
+        {
+            "name": "Luis Rovirosa",
+            "email": "luisrovirosa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "<7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Parrot\\": [
+                "src",
+                "tests"
+            ]
+        }
+    }
+}
