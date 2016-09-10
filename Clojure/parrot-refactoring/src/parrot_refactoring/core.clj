@@ -14,4 +14,4 @@
     :norwegian-blue-parrot (if (:nailed parrot)
                              0.0
                              (compute-base-speed-for-voltage (:voltage parrot)))
-    (throw "Should be unreachable!")))
+    (throw (Exception. "Should be unreachable!"))))
