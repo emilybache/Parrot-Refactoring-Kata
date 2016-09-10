@@ -60,4 +60,12 @@
     (parrot/speed {:type :norwegian-blue-parrot
                    :num-coconuts 0
                    :voltage 4.0
-                   :nailed false}) => 24.0))
+                   :nailed false}) => 24.0)
+
+  (fact
+    "it can't get speed of unknown parrrot types"
+
+    (parrot/speed {:type :unknown-parrot-type
+                   :num-coconuts 0
+                   :voltage 0.0
+                   :nailed false}) => (throws Exception "Should be unreachable!")))
