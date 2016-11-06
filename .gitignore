@@ -1,1 +1,4 @@
 PHP/vendor
+*.pyc
+.cache
+__pycache__
