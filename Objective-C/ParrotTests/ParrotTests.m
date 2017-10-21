@@ -1,10 +1,3 @@
-//
-//  ParrotTests.m
-//  ParrotTests
-//
-//  Created by Ivan Rublev on 10/21/17.
-//
-
 #import <XCTest/XCTest.h>
 #import "Parrot.h"
 
