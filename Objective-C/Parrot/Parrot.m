@@ -28,6 +28,7 @@
         case ParrotTypeEnumNorwegianBlue:
             return (_nailed) ? 0 : [self baseSpeed:_voltage];
     }
+    @throw [NSException exceptionWithName:@"Should be unreachable" reason:nil userInfo:nil];
 }
 
 - (double)baseSpeed:(double)voltage {
