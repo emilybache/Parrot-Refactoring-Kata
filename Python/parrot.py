@@ -9,8 +9,8 @@ class ParrotType(Enum):  # If it is not available, just remove it.
 
 class Parrot:
 
-    def __init__(self, type, number_of_coconuts, voltage, nailed):
-        self._type = type
+    def __init__(self, type_of_parrot, number_of_coconuts, voltage, nailed):
+        self._type = type_of_parrot
         self._number_of_coconuts = number_of_coconuts
         self._voltage = voltage
         self._nailed = nailed
