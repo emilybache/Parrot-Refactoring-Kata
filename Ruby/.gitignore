@@ -1,0 +1,6 @@
+.idea
+*.iml
+.project
+.buildpath
+.loadpath
+.settings
