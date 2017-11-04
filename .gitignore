@@ -1,5 +1,1 @@
-PHP/vendor
-*.pyc
-.cache
-__pycache__
 .idea
