@@ -22,7 +22,7 @@ def test_speedOfAfricanParrot_With_No_Coconuts():
 
 
 def test_speedNorwegianBlueParrot_nailed():
-    parrot = Parrot(ParrotType.NORWEGIAN_BLUE, 0, 0, True)
+    parrot = Parrot(ParrotType.NORWEGIAN_BLUE, 0, 1.5, True)
     assert parrot.speed() == 0.0
 
 
