@@ -26,7 +26,7 @@ class ParrotTest extends FlatSpec with Matchers {
   }
 
   it should "getSpeedNorwegianBlueParrot_nailed" in {
-    val parrot = new Parrot(ParrotType.NORWEGIAN_BLUE, 0, 0, true)
+    val parrot = new Parrot(ParrotType.NORWEGIAN_BLUE, 0, 1.5, true)
     parrot.getSpeed shouldEqual 0.0;
   }
 
