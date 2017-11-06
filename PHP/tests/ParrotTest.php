@@ -29,7 +29,7 @@ class ParrotTest extends \PHPUnit_Framework_TestCase {
 
   /** @test */
   public function get_speed_norwegian_blue_parrot_nailed() {
-    $parrot = new Parrot(ParrotTypeEnum::NORWEGIAN_BLUE, 0, 0,true);
+    $parrot = new Parrot(ParrotTypeEnum::NORWEGIAN_BLUE, 0, 1.5, true);
     $this->assertEquals(0.0, $parrot->getSpeed());
   }
 
