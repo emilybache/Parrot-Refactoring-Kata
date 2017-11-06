@@ -1,16 +1,12 @@
-package main.scala.parrot
+package parrot
 
 import parrot.ParrotType._
-import parrot.ParrotType
-import parrot.ParrotType.ParrotType
-
 
 class Parrot (parrotType: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Boolean) {
-
   
     def getSpeed: Double = {
       parrotType match {
-        case ParrotType.EUROPEAN =>
+        case EUROPEAN =>
           return getBaseSpeed
         case AFRICAN =>
           return Math.max(0, getBaseSpeed - getLoadFactor * numberOfCoconuts)
