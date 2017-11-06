@@ -1,5 +1,4 @@
 <?php
-
 namespace Parrot;
 
 abstract class ParrotTypeEnum {
