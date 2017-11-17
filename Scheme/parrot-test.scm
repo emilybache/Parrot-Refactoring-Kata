@@ -30,6 +30,6 @@
          (parrot-speed 'norwegian-blue-parrot 0 4.0 #f)) ; '))
 
 ; it can't get speed of unknown parrrot types
-(assert= 12.0
-         (parrot-speed 'unknown-parrot 0 0.0 #f)) ; '))
-; => (throws Exception "Should be unreachable!")))
+(assert-raise
+    'Should-be-unreachable ; '
+    (lambda () (parrot-speed 'unknown-parrot 0 0.0 #f))) ; ')))

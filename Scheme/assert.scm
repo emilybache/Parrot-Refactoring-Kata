@@ -25,3 +25,11 @@
 )
 
 (assert= 1 1) ; self test
+
+(define (assert-raise expected-exc body)
+    (with-exception-catcher
+        (lambda (exc)
+             (assert
+                (string-append "Should raise " (symbol->string expected-exc))
+                (eq? expected-exc exc)))
+        (lambda () (report-error (body)))))

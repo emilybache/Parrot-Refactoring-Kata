@@ -10,6 +10,6 @@
             (max 0.0 (- (base-speed) (* (load-factor) num-coconuts))))
         ((eq? parrot-type 'norwegian-blue-parrot) ; ')
             (if nailed 0.0 (compute-base-speed-for-voltage voltage)))
-        (else (error "Should be unreachable!"))
+        (else (raise 'Should-be-unreachable)) ; '))
     )
 )
