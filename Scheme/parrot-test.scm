@@ -1,71 +1,35 @@
-(ns parrot-refactoring.core-test
-  (:require
-    [midje.sweet :refer :all]
-    [parrot-refactoring.core :as parrot]))
+(include "assert.scm")
+(include "parrot.scm")
 
-(facts
-  "about Parrots"
+; it gets the speed of a european parrot
+(assert= 12.0
+         (parrot-speed 'european-parrot 0 0.0 #f)) ; '))
 
-  (fact
-    "it gets the speed of a european parrot"
+; it gets the speed of an african parrot with one coconut
+(assert= 3.0
+         (parrot-speed 'african-parrot 1 0.0 #f)) ; '))
 
-    (parrot/speed {:type :european-parrot
-                   :num-coconuts 0
-                   :voltage 0.0
-                   :nailed false}) => 12.0)
+; it gets the speed of an african parrot with two coconuts
+(assert= 0.0
+         (parrot-speed 'african-parrot 2 0.0 #f)) ; '))
 
-  (fact
-    "it gets the speed of an african parrot with one coconut"
+; it gets the speed of an african parrot with no coconuts
+(assert= 12.0
+         (parrot-speed 'african-parrot 0 0.0 #f)) ; '))
 
-    (parrot/speed {:type :african-parrot
-                   :num-coconuts 1
-                   :voltage 0.0
-                   :nailed false}) => 3.0)
+; it gets the speed of a nailed norwegian blue parrot
+(assert= 0.0
+         (parrot-speed 'norwegian-blue-parrot 0 1.5 #t)) ; '))
 
-  (fact
-    "it gets the speed of an african parrot with two coconuts"
+; it gets the speed of a not nailed norwegian blue parrot
+(assert= 18.0
+         (parrot-speed 'norwegian-blue-parrot 0 1.5 #f)) ; '))
 
-    (parrot/speed {:type :african-parrot
-                   :num-coconuts 2
-                   :voltage 0.0
-                   :nailed false}) => 0.0)
+; it gets the speed of a not nailed norwegian blue parrot with high voltage
+(assert= 24.0
+         (parrot-speed 'norwegian-blue-parrot 0 4.0 #f)) ; '))
 
-  (fact
-    "it gets the speed of an african parrot with no coconuts"
-
-    (parrot/speed {:type :african-parrot
-                   :num-coconuts 0
-                   :voltage 0.0
-                   :nailed false}) => 12.0)
-
-  (fact
-    "it gets the speed of a nailed norwegian blue parrot"
-
-    (parrot/speed {:type :norwegian-blue-parrot
-                   :num-coconuts 0
-                   :voltage 0.0
-                   :nailed true}) => 0.0)
-
-  (fact
-    "it gets the speed of a not nailed norwegian blue parrot"
-
-    (parrot/speed {:type :norwegian-blue-parrot
-                   :num-coconuts 0
-                   :voltage 1.5
-                   :nailed false}) => 18.0)
-
-  (fact
-    "it gets the speed of a not nailed norwegian blue parrot with high voltage"
-
-    (parrot/speed {:type :norwegian-blue-parrot
-                   :num-coconuts 0
-                   :voltage 4.0
-                   :nailed false}) => 24.0)
-
-  (fact
-    "it can't get speed of unknown parrrot types"
-
-    (parrot/speed {:type :unknown-parrot-type
-                   :num-coconuts 0
-                   :voltage 0.0
-                   :nailed false}) => (throws Exception "Should be unreachable!")))
+; it can't get speed of unknown parrrot types
+(assert= 12.0
+         (parrot-speed 'unknown-parrot 0 0.0 #f)) ; '))
+; => (throws Exception "Should be unreachable!")))
