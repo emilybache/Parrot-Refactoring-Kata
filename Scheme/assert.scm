@@ -46,5 +46,5 @@
 
 (test-case "assert-raise"
     (assert-raise
-        'a ; '
-        (lambda () (raise 'a)))) ; '))))
+        'a
+        (lambda () (raise 'a))))
