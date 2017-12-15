@@ -3,21 +3,21 @@ unit Parrot;
 interface
 
 type
-     TParrotType = (European, African, NorwegianBlue);
-     TParrot = object
-         ParrotType: TParrotType;
-         NumberOfCoconuts: Word;
-         Voltage: Double;
-         IsNailed: Boolean;
+    TParrotType = (European, African, NorwegianBlue);
+    TParrot = object
+        ParrotType: TParrotType;
+        NumberOfCoconuts: Word;
+        Voltage: Double;
+        IsNailed: Boolean;
 
-         constructor Init(ParrotTypeIn: TParrotType; NumberOfCoconutsIn: Word; VoltageIn: Double; IsNailedIn: Boolean);
-         function GetSpeed: Double;
-         { private }
-         function GetBaseSpeed: Double;
-         function GetLoadFactor: Double;
-         function GetBaseSpeedForVoltage(VoltageIn: Double): Double;
-     end;
-     PParrot = ^TParrot;
+        constructor Init(ParrotTypeIn: TParrotType; NumberOfCoconutsIn: Word; VoltageIn: Double; IsNailedIn: Boolean);
+        function GetSpeed: Double;
+        { private }
+        function GetBaseSpeed: Double;
+        function GetLoadFactor: Double;
+        function GetBaseSpeedForVoltage(VoltageIn: Double): Double;
+    end;
+    PParrot = ^TParrot;
 
 implementation
 
@@ -50,7 +50,7 @@ function TParrot.GetSpeed: Double;
 begin
     if Self.ParrotType = European then
     begin
-        GetSpeed := GetBaseSpeed;
+        GetSpeed := Self.GetBaseSpeed;
     end
     else if Self.ParrotType = African then
     begin
@@ -69,7 +69,8 @@ begin
     end
     else
     begin
-        RunError(42); { Should be unreachable }
+        WriteLn('Should be unreachable');
+        RunError(42);
     end;
 end;
 
