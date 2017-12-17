@@ -4,7 +4,7 @@
   "description": "parrot refactoring kata",
   "main": "src/parrot.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -R spec"
   },
   "author": "Peter 'Code Cop' Kofler",
   "license": "MIT",
