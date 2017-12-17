@@ -1,10 +1,11 @@
 /* global require, describe, it */
-'use strict';
 
 var expect = require('chai').expect;
 var Parrot = require('../src/parrot');
 
 describe("Parrot", function () {
+    'use strict';
+
     it("get speed of european parrot", function () {
         var parrot = new Parrot(Parrot.TYPES.EUROPEAN, 0, 0, false);
 
