@@ -1,4 +1,5 @@
 /* global module */
+
 var PARROT_TYPES = {
     EUROPEAN:       'EUROPEAN',
     AFRICAN:        'AFRICAN',
