@@ -1,0 +1,11 @@
+node_modules
+coverage
+npm-debug.log
+
+.project
+.settings
+.classpath
+
+.idea
+*.iml
+*.iwr
