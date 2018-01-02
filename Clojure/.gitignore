@@ -1,5 +1,7 @@
 target
 *~*
 .nrepl-port
+.lein-failures
+
 *.iml
 .idea
