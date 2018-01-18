@@ -43,7 +43,7 @@
 
     (parrot/speed {:type :norwegian-blue-parrot
                    :num-coconuts 0
-                   :voltage 0.0
+                   :voltage 1.5
                    :nailed true}) => 0.0)
 
   (fact
