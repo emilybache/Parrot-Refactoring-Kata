@@ -2,3 +2,6 @@ PHP/vendor
 *.pyc
 .cache
 __pycache__
+**/*.iml
+target
+.idea
