@@ -5,3 +5,6 @@ __pycache__
 **/*.iml
 target
 .idea
+.vs
+CSharp/bin
+CSharp/obj
