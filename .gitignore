@@ -1,1 +1,10 @@
+PHP/vendor
+*.pyc
+.cache
+__pycache__
+**/*.iml
+target
 .idea
+.vs
+CSharp/bin
+CSharp/obj
