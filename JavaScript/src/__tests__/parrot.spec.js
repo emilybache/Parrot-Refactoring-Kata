@@ -26,7 +26,7 @@ describe("Parrot", function () {
     });
 
     test("get speed norwegian blue parrot nailed", function () {
-        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 0, true);
+        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 1.5, true);
 
         expect(parrot.getSpeed()).toBe(0);
     });

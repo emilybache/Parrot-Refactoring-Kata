@@ -1,0 +1,16 @@
+{
+  "name": "parrot-refactoring-kata",
+  "version": "0.0.1",
+  "description": "parrot refactoring kata",
+  "main": "src/parrot.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": "Peter 'Code Cop' Kofler",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "1.17.1",
+    "chai": "1.9.2"
+  }
+}
