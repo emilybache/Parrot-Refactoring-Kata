@@ -1,12 +1,15 @@
-# parrot-refactoring
+Parrot Refactoring Kata Clojure version
+=======================================
 
-Parrot Refactoring Kata
+Parrot Refactoring Kata.
 
-## How to run the tests
+This is a [Leiningen](https://leiningen.org/) project.
 
 The project uses [Midje](https://github.com/marick/Midje/).
 
-`lein midje` will run all tests.
+To run the test:
+
+    lein midje
 
 `lein midje namespace.*` will run only tests beginning with "namespace.".
 
