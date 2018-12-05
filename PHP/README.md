@@ -1,10 +1,20 @@
-# Run the tests
-1. Install [composer](https://getcomposer.org) locally:
+Parrot Refactoring Kata PHP version
+===================================
 
-	`curl -sS https://getcomposer.org/installer | php`
-2. Install dependencies:
+Parrot Refactoring Kata.
 
-	`php composer.phar install`
-3. Run the tests
+This is a [Composer](https://getcomposer.org) project.
 
-	`./vendor/bin/phpunit`
+To install Composer locally:
+
+    curl -sS https://getcomposer.org/installer | php
+
+To install dependencies:
+
+    php composer.phar install
+
+The project uses [PHPUnit](https://phpunit.de/).
+
+To run the tests:
+
+    ./vendor/bin/phpunit
