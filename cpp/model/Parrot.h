@@ -1,7 +1,7 @@
 #ifndef PARROT_PARROT_H
 #define PARROT_PARROT_H
 
-enum ParrotType { European, African, NorwegianBlue};
+enum ParrotType { EUROPEAN, AFRICAN, NORWEGIAN_BLUE};
 
 class Parrot {
 public:
@@ -14,6 +14,9 @@ private:
     double voltage;
     bool isNailed;
 
+    double getBaseSpeed(double voltage);
+    double getLoadFactor();
+    double getBaseSpeed();
 };
 
 
