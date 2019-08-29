@@ -30,6 +30,6 @@ include_directories(${CMAKE_BINARY_DIR}/test)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Parrot test/main.cpp
-        test/ParrotTest.cpp)
+        test/ParrotTest.cpp model/Parrot.cpp model/Parrot.h)
 target_link_libraries(Parrot ${GTEST_BOTH_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME Parrot COMMAND Parrot)

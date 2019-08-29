@@ -1,8 +1,9 @@
-using namespace std;
 
 #include "gtest/gtest.h"
 
-TEST(ParrotTest, SpeedOfEuropeanParrot) {
+#include "../model/Parrot.h"
 
-    ASSERT_EQ(10, 11);
+TEST(ParrotTest, SpeedOfEuropeanParrot) {
+    auto parrot = new Parrot(European, 0, 0, false);
+    EXPECT_NEAR(12.0, parrot->getSpeed(), 0.0);
 }
