@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace parrot
+namespace Parrot
 {
     public class Parrot
     {
-        readonly ParrotTypeEnum _type;
-        readonly int _numberOfCoconuts;
-        readonly double _voltage;
-        readonly bool _isNailed;
+        private readonly bool _isNailed;
+        private readonly int _numberOfCoconuts;
+        private readonly ParrotTypeEnum _type;
+        private readonly double _voltage;
 
         public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
         {
             _type = type;
             _numberOfCoconuts = numberOfCoconuts;
             _voltage = voltage;
-            _isNailed = isNailed; 
+            _isNailed = isNailed;
         }
 
         public double GetSpeed()
@@ -26,7 +26,7 @@ namespace parrot
                 case ParrotTypeEnum.AFRICAN:
                     return Math.Max(0, GetBaseSpeed() - GetLoadFactor() * _numberOfCoconuts);
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
-                    return (_isNailed) ? 0 : GetBaseSpeed(_voltage);
+                    return _isNailed ? 0 : GetBaseSpeed(_voltage);
             }
 
             throw new Exception("Should be unreachable");
