@@ -1,5 +1,4 @@
-﻿
-namespace parrot
+﻿namespace Parrot
 {
     public enum ParrotTypeEnum
     {
