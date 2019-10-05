@@ -1,0 +1,9 @@
+name: parrot
+version: 0.1.0
+
+authors:
+  - Eloy Perez <ej.perezgomez@gmail.com>
+
+crystal: 0.31.1
+
+license: MIT
