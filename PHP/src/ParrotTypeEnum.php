@@ -1,8 +1,15 @@
 <?php
+
 namespace Parrot;
 
-abstract class ParrotTypeEnum {
-  const EUROPEAN = 0;
-  const AFRICAN = 1;
-  const NORWEGIAN_BLUE = 2;
+/**
+ * Class ParrotTypeEnum
+ *
+ * @package Parrot
+ */
+abstract class ParrotTypeEnum
+{
+    public const EUROPEAN = 0;
+    public const AFRICAN = 1;
+    public const NORWEGIAN_BLUE = 2;
 }

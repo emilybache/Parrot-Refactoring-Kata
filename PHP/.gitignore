@@ -5,3 +5,4 @@ composer.phar
 .project
 .buildpath
 .settings
+/.phpunit.result.cache
