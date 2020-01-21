@@ -6,7 +6,7 @@ To compile and run your tests, you you will need:
 More Verbose Instructions
 -------------------------
 
-Create a clone of both SupermarketReceipt-Refactoring-Kata and googletest in a directory we'll call ${ROOT_INSTALL_DIR}:
+Create a clone of both Parrot-Refactoring-Kata and googletest in a directory we'll call ${ROOT_INSTALL_DIR}:
 
     cd ${ROOT_INSTALL_DIR}
     git clone https://github.com/emilybache/Parrot-Refactoring-Kata
@@ -17,7 +17,7 @@ Make googletest by running make in subfolder googletest/googletest/make:
     cd googletest/googletest/make
     make
 
-Create a softlink in the SupermarketReceipt-Refactoring-Kata clone pointing at the googletest code:
+Create a softlink in the Parrot-Refactoring-Kata clone pointing at the googletest code:
 
     cd ${ROOT_INSTALL_DIR}/Parrot-Refactoring-Kata/cpp
     ln -s ${ROOT_INSTALL_DIR}/googletest/googletest gtest
