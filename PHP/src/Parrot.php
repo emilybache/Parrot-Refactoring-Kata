@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Parrot;
 
 use Exception;
@@ -10,20 +12,23 @@ class Parrot
      * @var int ParrotTypeEnum
      */
     private $type;
+
     /**
      * @var int
      */
     private $numberOfCoconuts;
+
     /**
      * @var float
      */
     private $voltage;
+
     /**
      * @var bool
      */
     private $isNailed;
 
-    public function __construct($type, $numberOfCoconuts, $voltage, $isNailed)
+    public function __construct(int $type, int $numberOfCoconuts, float $voltage, bool $isNailed)
     {
         $this->type = $type;
         $this->numberOfCoconuts = $numberOfCoconuts;
@@ -31,7 +36,7 @@ class Parrot
         $this->isNailed = $isNailed;
     }
 
-    public function getSpeed()
+    public function getSpeed(): float
     {
         switch ($this->type) {
             case ParrotTypeEnum::EUROPEAN:
@@ -41,20 +46,20 @@ class Parrot
             case ParrotTypeEnum::NORWEGIAN_BLUE:
                 return $this->isNailed ? 0 : $this->getBaseSpeedWith($this->voltage);
         }
-        throw new Exception("Should be unreachable");
+        throw new Exception('Should be unreachable');
     }
 
-    private function getBaseSpeedWith($voltage)
+    private function getBaseSpeedWith(float $voltage): float
     {
         return min(24.0, $voltage * $this->getBaseSpeed());
     }
 
-    private function getLoadFactor()
+    private function getLoadFactor(): float
     {
         return 9.0;
     }
 
-    private function getBaseSpeed()
+    private function getBaseSpeed(): float
     {
         return 12.0;
     }
