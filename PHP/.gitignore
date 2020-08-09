@@ -1,4 +1,4 @@
-vendor
+/vendor
 composer.phar
 .idea
 *.iml
@@ -6,3 +6,4 @@ composer.phar
 .buildpath
 .settings
 /.phpunit.result.cache
+/build
