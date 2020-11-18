@@ -7,3 +7,5 @@ build
 .classpath
 .settings
 .pmd
+gradle
+gradle/wrapper
