@@ -1,9 +1,5 @@
+/.idea
+/.phpstorm.meta.php
 /vendor
-composer.phar
-.idea
-*.iml
-.project
-.buildpath
-.settings
 /.phpunit.result.cache
-/build
+/build/
