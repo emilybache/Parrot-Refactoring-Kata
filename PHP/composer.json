@@ -3,12 +3,6 @@
     "name": "emilybache/parrot-refactoring-kata",
     "description": "Kata to practice Pol(l)ymorphism",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Luis Rovirosa",
-            "email": "luisrovirosa@gmail.com"
-        }
-    ],
     "require": {
         "php": "^7.3|^8.0"
     },
