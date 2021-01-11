@@ -94,7 +94,7 @@ cc
 
 ### Fix Code
 
-There are may code fixes automatically provided by ECS, if advised to run --fix, the following script can be run:
+There are many code fixes automatically provided by ECS, if advised to run --fix, the following script can be run:
 
 ```shell script
 composer fix-cs
@@ -109,7 +109,7 @@ fc
 
 ## Static Analysis
 
-PHPStan is used to run static analysis checks.
+PHPStan is used to run static analysis checks:
 
 ```shell script
 composer phpstan
