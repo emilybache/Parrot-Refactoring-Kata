@@ -1,12 +1,14 @@
-# Parrot Refactoring Kata - PHP
+# Parrot Refactoring Kata
 
-This is the PHP version of the Parrot Refactoring Kata. The project is fully functional, with a full test suite. The objective of this Kata is improve the code. The tests do not normally need to be changed.
+See the [top level readme](../README.md) for general information about this exercise. This is the PHP version of the 
+Parrot Refactoring Kata. The Kata is fully functional, with a full test suite. The objective of this Kata is to 
+improve the code using Pol(l)ymorphism. The tests do not normally need to be changed.
 
 ## Installation
 
-The project uses:
+The kata uses:
 
-- PHP 7.2+
+- [PHP 7.3 or 7.4 or 8.0+](https://www.php.net/downloads.php)
 - [Composer](https://getcomposer.org)
 
 Recommended:
@@ -16,48 +18,46 @@ Recommended:
 Clone the repository
 
 ```sh
-git clone git@github.com:emilybache/Parrot-Refactoring-Kata.git
-```
-
-or
-
-```sh
 git clone https://github.com/emilybache/Parrot-Refactoring-Kata.git
 ```
 
 Install all the dependencies using composer
 
 ```sh
-cd Parrot-Refactoring-Kata/php
+cd Parrot-Refactoring-Kata/PHP
 composer install
+```
+
+Run all the tests
+
+```shell script
 composer test
 ```
 
 ## Dependencies
 
-The project uses composer to install:
+The kata uses composer to install:
 
 - [PHPUnit](https://phpunit.de/)
 - [PHPStan](https://github.com/phpstan/phpstan)
-- [Easy Coding Standard (ECS)](https://github.com/symplify/easy-coding-standard) 
-- [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki)
+- [Easy Coding Standard (ECS)](https://github.com/symplify/easy-coding-standard)
 
 ## Folders
 
-- `src` - Contains the Parrot class and ParrotTypeEnum
-- `tests` - Contains the ParrotTest
+- `src` - contains the Parrot class which need to be refactored and a ParrotTypeEnum.
+- `tests` - contains the corresponding tests. All the tests are passing, and shouldn't need to be changed.
 
 ## Testing
 
-PHPUnit is used to run tests, to help this can be run using a composer script. To run the unit tests, from the root of
- the project run:
+PHPUnit is pre-configured to run tests. PHPUnit can be run using a composer script. To run the unit tests, from the root
+of the PHP kata run:
 
 ```shell script
 composer test
 ```
 
 On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias pu="composer test"`), the same
- PHPUnit `composer test` can be run:
+PHPUnit `composer test` can be run:
 
 ```shell script
 pu
@@ -71,7 +71,7 @@ To run all test and generate a html coverage report run:
 composer test-coverage
 ```
 
-The coverage report is created in /builds, it is best viewed by opening **index.html** in your browser.
+The test-coverage report will be created in /builds, it is best viewed by opening /builds/**index.html** in your browser.
 
 ## Code Standard
 
@@ -86,7 +86,7 @@ composer check-cs
 ``` 
 
 On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias cc="composer check-cs"`), the
- same PHPUnit `composer check-cs` can be run:
+same `composer check-cs` can be run:
 
 ```shell script
 cc
@@ -94,14 +94,14 @@ cc
 
 ### Fix Code
 
-May code fixes are automatically provided by ECS, if advised to run --fix, the following script can be run:
+There are many code fixes automatically provided by ECS, if advised to run --fix, the following script can be run:
 
 ```shell script
 composer fix-cs
 ```
 
-On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias fc="composer fix-cs"`), the same
- PHPUnit `composer fix-cs` can be run:
+On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias fc="composer fix-cs"`), the same 
+`composer fix-cs` can be run:
 
 ```shell script
 fc
@@ -115,8 +115,8 @@ PHPStan is used to run static analysis checks:
 composer phpstan
 ```
 
-On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias ps="composer phpstan"`), the
- same PHPUnit `composer phpstan` can be run:
+On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias ps="composer phpstan"`), the 
+same `composer phpstan` can be run:
 
 ```shell script
 ps
