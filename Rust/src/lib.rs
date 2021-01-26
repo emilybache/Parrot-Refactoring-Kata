@@ -65,36 +65,62 @@ mod tests {
     }
 
     #[test]
-    fn african_parrot_speed_with_one_coconut() {
-        let test = AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 1, voltage: 0.0, nailed: false }}; 
-        assert_eq!(test.speed(), 3.0);
+    fn african_parrot_speed(){
+        struct Test {
+            input: AfricanParrot,
+            output: f32,
+        }
+
+        let tests = vec![
+            Test {
+                input: AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 1, voltage: 0.0, nailed: false}},
+                output: 3.0
+            },
+            Test {
+                input: AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 2, voltage: 0.0, nailed: false }},
+                output: 0.0
+            },
+            Test {
+                input: AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 0.0, nailed: false}},
+                output: 12.0
+            },
+        ];
+
+        for test in tests {
+             let result = test.input;
+             assert_eq!(result.speed(), test.output);
+        }
+    
     }
 
     #[test]
-    fn african_parrot_speed_with_two_coconut() {
-        let test = AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 2, voltage: 0.0, nailed: false }}; 
-        assert_eq!(test.speed(), 0.0);
+    fn norwegian_blue_parrot_speed(){
+        struct Test {
+            input: NorwegianBlueParrot,
+            output: f32,
+        }
+
+        let tests = vec![
+            Test {
+                input:  NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 2, voltage: 0.0, nailed: true }},
+                output: 0.0
+            },
+            Test {
+                input: NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 1.5, nailed: false }},
+                output: 18.0
+            },
+            Test {
+                input: NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 4.0, nailed: false }},
+                output: 24.0
+            },
+        ];
+
+        for test in tests {
+             let result = test.input;
+             assert_eq!(result.speed(), test.output);
+        }
+    
     }
 
-    #[test]
-    fn african_parrot_speed_with_no_coconut() {
-        let test = AfricanParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 0.0, nailed: false }}; 
-        assert_eq!(test.speed(), 12.0);
-    }
-
-    #[test]
-    fn nailed_norwegian_blue_parrot() {
-        let test = NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 2, voltage: 0.0, nailed: true }}; 
-        assert_eq!(test.speed(), 0.0);
-    }
-    #[test]
-    fn not_nailed_norwegian_blue_parrot() {
-        let test = NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 1.5, nailed: false }}; 
-        assert_eq!(test.speed(), 18.0);
-    }
-    #[test]
-    fn not_nailed_norwegian_blue_parrot_with_high_voltage() {
-        let test = NorwegianBlueParrot { parrot: ParrotBase{ number_of_coconuts: 0, voltage: 4.0, nailed: false }}; 
-        assert_eq!(test.speed(), 24.0);
-    }
+ 
 }
