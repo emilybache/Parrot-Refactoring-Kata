@@ -7,15 +7,11 @@ struct ParrotBase{
         nailed: bool,
 }
 
-trait Parrot {
-    fn speed(&self) -> f32;
-}
-
 struct EuropeanParrot{
     parrot: ParrotBase,
 }
 
-impl Parrot for EuropeanParrot{
+impl EuropeanParrot{
     fn speed(&self) -> f32 {
        return BASE_SPEED;
     }
@@ -25,7 +21,7 @@ struct AfricanParrot{
     parrot: ParrotBase,
 }
 
-impl Parrot for AfricanParrot{
+impl AfricanParrot{
     fn speed(&self) -> f32 {
         let african_speed = BASE_SPEED - LOAD_FACTOR * self.parrot.number_of_coconuts as f32;
         if african_speed > 0.0 { return african_speed } else { return 0.0}
@@ -36,7 +32,7 @@ struct NorwegianBlueParrot{
     parrot: ParrotBase,
 }
 
-impl Parrot for NorwegianBlueParrot{
+impl NorwegianBlueParrot{
     fn speed(&self) -> f32 {
         if self.parrot.nailed == true {
             return 0.0
