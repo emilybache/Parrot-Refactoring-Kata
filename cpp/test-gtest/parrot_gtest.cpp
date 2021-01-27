@@ -1,7 +1,9 @@
+#include <gtest/gtest.h>
 
-#include "gtest/gtest.h"
+using namespace std;
 
-#include "../model/Parrot.h"
+#include "Parrot.h"
+
 
 TEST(ParrotTest, SpeedOfEuropeanParrot) {
     auto *parrot = new Parrot(EUROPEAN, 0, 0, false);

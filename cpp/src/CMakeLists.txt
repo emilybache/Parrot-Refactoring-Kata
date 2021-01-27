@@ -1,4 +1,4 @@
-set(SRC_LIB_NAME model)
+set(SRC_LIB_NAME src)
 set(SOURCES Parrot.cpp)
 add_library(${SRC_LIB_NAME} ${SOURCES})
 target_sources(${SRC_LIB_NAME} PRIVATE ${SOURCES})
