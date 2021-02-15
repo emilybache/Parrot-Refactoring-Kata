@@ -1,9 +1,9 @@
 package parrot
 
-import org.scalatest.FlatSpec
-import org.scalatest.Matchers
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.flatspec.AnyFlatSpec
 
-class ParrotTest extends FlatSpec with Matchers {
+class ParrotTest extends AnyFlatSpec with Matchers {
 
   it should "getSpeedOfEuropeanParrot" in {
     val parrot = new Parrot(ParrotType.EUROPEAN, 0, 0, false)
