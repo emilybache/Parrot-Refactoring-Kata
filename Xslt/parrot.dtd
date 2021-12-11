@@ -1,0 +1,5 @@
+<!ELEMENT parrot EMPTY>
+<!ATTLIST parrot type CDATA #REQUIRED>
+<!ATTLIST parrot numberOfCoconuts CDATA #REQUIRED>
+<!ATTLIST parrot voltage CDATA #REQUIRED>
+<!ATTLIST parrot isNailed CDATA #REQUIRED>
