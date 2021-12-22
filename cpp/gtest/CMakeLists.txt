@@ -27,7 +27,8 @@ FetchContent_Declare(
         GIT_SHALLOW    1
 )
 FetchContent_MakeAvailable(ApprovalTests)
-target_compile_options(ApprovalTests PRIVATE -Wno-attributes)
+# uncomment these lines to build ApprovalTests using GCC Mingw Windows
+#target_compile_options(ApprovalTests PRIVATE -Wno-attributes)
 
 # GoogleTest
 FetchContent_Declare(
