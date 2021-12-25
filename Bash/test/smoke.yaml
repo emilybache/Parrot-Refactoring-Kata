@@ -1,0 +1,7 @@
+exit-status: 0
+
+tests:
+  - name:     "()"
+    stdin:    "()"
+    stdout: |
+       OK
