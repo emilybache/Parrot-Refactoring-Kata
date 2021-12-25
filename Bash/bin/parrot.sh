@@ -49,7 +49,8 @@ getSpeed() {
             fi
             ;;
         *)
-            # throw new Error("Should be unreachable");
+            echo "Should be unreachable"
+            exit 1
             ;;
     esac
 }

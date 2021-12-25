@@ -35,3 +35,9 @@ tests:
     args: ["norwegian_blue_parrot", "0", "4", "false"]
     stdout: |
       24.0
+
+  - name: "fails on unknown parrot"
+    args: ["unknown_parrot", "0", "0", "false"]
+    exit-status: 1
+    stdout: |
+      Should be unreachable
