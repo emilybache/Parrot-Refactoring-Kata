@@ -1,0 +1,43 @@
+exit-status: 0
+
+tests:
+  - name: "gets speed of a European parrot"
+    args: ["european_parrot", "0", "0", "false"]
+    stdout: |
+      12.0
+
+  - name: "gets speed of an African parrot with one coconut"
+    args: ["african_parrot", "1", "0", "false"]
+    stdout: |
+      3.0
+
+  - name: "gets speed of an African parrot with two coconuts"
+    args: ["african_parrot", "2", "0", "false"]
+    stdout: |
+      0.0
+
+  - name: "gets speed of an African parrot with no coconuts"
+    args: ["african_parrot", "0", "0", "false"]
+    stdout: |
+      12.0
+
+  - name: "gets speed of a nailed Norwegian blue parrot"
+    args: ["norwegian_blue_parrot", "0", "1.5", "true"]
+    stdout: |
+      0.0
+
+  - name: "gets speed of a not nailed Norwegian blue parrot"
+    args: ["norwegian_blue_parrot", "0", "1.5", "false"]
+    stdout: |
+      18.0
+
+  - name: "gets speed of a not nailed Norwegian blue parrot with high voltage"
+    args: ["norwegian_blue_parrot", "0", "4", "false"]
+    stdout: |
+      24.0
+
+  - name: "fails on unknown parrot"
+    args: ["unknown_parrot", "0", "0", "false"]
+    exit-status: 1
+    stdout: |
+      Should be unreachable

@@ -5,6 +5,7 @@
 node_modules/
 npm-debug.log
 typings
+package-lock.json
 
 src/**/*.js
 src/**/*.js.map
