@@ -1,5 +1,5 @@
 import Foundation
 
-enum ParrotTypeEnum {
+enum ParrotType {
     case european, african, norwegianBlue
 }
