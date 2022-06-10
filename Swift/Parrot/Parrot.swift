@@ -22,7 +22,7 @@ class Parrot {
             return max(0, baseSpeed - loadFactor * Double(numberOfCoconuts))
 
         case .norwegianBlue:
-            return (isNailed) ? 0 : baseSpeed(voltage: voltage)
+            return isNailed ? 0 : baseSpeed(voltage: voltage)
         }
     }
 
