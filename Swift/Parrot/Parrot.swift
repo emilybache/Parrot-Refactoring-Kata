@@ -27,14 +27,14 @@ class Parrot {
     }
 
     private func baseSpeed(voltage: Double) -> Double {
-        return min(24.0, voltage * baseSpeed)
+        min(24.0, voltage * baseSpeed)
     }
 
     private var loadFactor: Double {
-        return 9.0
+        9.0
     }
 
     private var baseSpeed: Double {
-        return 12.0
+        12.0
     }
 }
