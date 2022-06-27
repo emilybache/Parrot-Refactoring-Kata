@@ -13,7 +13,7 @@ class Parrot {
         self.isNailed = isNailed
     }
 
-    var speed: Double {
+    func speed() -> Double {
         switch type {
         case .european:
             return baseSpeed
