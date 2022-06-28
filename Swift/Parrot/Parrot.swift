@@ -1,20 +1,20 @@
 import Foundation
 
 class Parrot {
-    private let parrotType: ParrotType
+    private let type: ParrotType
     private let numberOfCoconuts: Int
     private let voltage: Double
     private let isNailed: Bool
 
-    init(_ parrotType: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
-        self.parrotType = parrotType
+    init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
+        self.type = type
         self.numberOfCoconuts = numberOfCoconuts
         self.voltage = voltage
         self.isNailed = isNailed
     }
 
-    var speed: Double {
-        switch parrotType {
+    func speed() -> Double {
+        switch type {
         case .european:
             return baseSpeed
 
