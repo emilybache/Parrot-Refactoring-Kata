@@ -1,23 +1,18 @@
-# Ios
-DerivedData
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-*.xcuserstate
-*.xcscmblueprint
-*.hmap
-*.ipa
-*.app.dSYM.zip
-*.xcarchive
-*.xcarchive.zip
+# Extra folder created by Xcode
+.swiftpm/
+
+# Created by https://www.toptal.com/developers/gitignore/api/macos,swiftpackagemanager,xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swiftpackagemanager,xcode
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
 
 # Thumbnails
 ._*
@@ -29,3 +24,41 @@ xcuserdata
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
+### SwiftPackageManager ###
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
+
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.toptal.com/developers/gitignore/api/macos,swiftpackagemanager,xcode
