@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Parrot
 {
@@ -27,9 +28,9 @@ namespace Parrot
                     return Math.Max(0, GetBaseSpeed() - GetLoadFactor() * _numberOfCoconuts);
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
                     return _isNailed ? 0 : GetBaseSpeed(_voltage);
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
-
-            throw new Exception("Should be unreachable");
         }
 
         private double GetBaseSpeed(double voltage)
@@ -45,6 +46,26 @@ namespace Parrot
         private double GetBaseSpeed()
         {
             return 12.0;
+        }
+
+        public string GetCry()
+        {
+            string value;
+            switch (_type)
+            {
+                case ParrotTypeEnum.EUROPEAN:
+                    value = "Sqoork!";
+                    break;
+                case ParrotTypeEnum.AFRICAN:
+                    value = "Sqaark!";
+                    break;
+                case ParrotTypeEnum.NORWEGIAN_BLUE:
+                    value = _voltage > 0 ? "Bzzzzzz" : "...";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return value;
         }
     }
 }

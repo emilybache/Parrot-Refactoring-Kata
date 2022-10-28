@@ -52,5 +52,33 @@ namespace Parrot.Tests
             var parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
             Assert.Equal(12.0, parrot.GetSpeed());
         }
+        
+        [Fact]
+        public void GetCryOfEuropeanParrot()
+        {
+            var parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
+            Assert.Equal("Sqoork!", parrot.GetCry());
+        }
+        
+        [Fact]
+        public void GetCryOfAfricanParrot()
+        {
+            var parrot = new Parrot(ParrotTypeEnum.AFRICAN, 2, 0, false);
+            Assert.Equal("Sqaark!", parrot.GetCry());
+        }
+        
+        [Fact]
+        public void GetCryNorwegianBlueParrot_high_voltage()
+        {
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
+            Assert.Equal("Bzzzzzz", parrot.GetCry());
+        }
+        
+        [Fact]
+        public void GetCryNorwegianBlueParrot_no_voltage()
+        {
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
+            Assert.Equal("...", parrot.GetCry());
+        }
     }
 }
