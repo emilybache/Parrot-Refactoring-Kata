@@ -8,14 +8,15 @@ improve the code using Pol(l)ymorphism. The tests do not normally need to be cha
 
 The kata uses:
 
-- [PHP 7.3 or 7.4 or 8.0+](https://www.php.net/downloads.php)
+- [PHP 8.0+](https://www.php.net/downloads.php)
 - [Composer](https://getcomposer.org)
 
 Recommended:
 
 - [Git](https://git-scm.com/downloads)
 
-Clone the repository
+See [GitHub cloning a repository](https://help.github.com/en/articles/cloning-a-repository) for details on how to
+create a local copy of this project on your computer.
 
 ```sh
 git clone https://github.com/emilybache/Parrot-Refactoring-Kata.git
@@ -31,7 +32,7 @@ composer install
 Run all the tests
 
 ```shell script
-composer test
+composer tests
 ```
 
 ## Dependencies
@@ -53,14 +54,14 @@ PHPUnit is pre-configured to run tests. PHPUnit can be run using a composer scri
 of the PHP kata run:
 
 ```shell script
-composer test
+composer tests
 ```
 
 On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias pu="composer test"`), the same
 PHPUnit `composer test` can be run:
 
 ```shell script
-pu
+pu.bat
 ```
 
 ### Tests with Coverage Report
@@ -89,7 +90,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 same `composer check-cs` can be run:
 
 ```shell script
-cc
+cc.bat
 ```
 
 ### Fix Code
@@ -104,7 +105,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 `composer fix-cs` can be run:
 
 ```shell script
-fc
+fc.bat
 ```
 
 ## Static Analysis
@@ -119,7 +120,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 same `composer phpstan` can be run:
 
 ```shell script
-ps
+ps.bat
 ```
 
 **Happy coding**!
