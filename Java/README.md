@@ -9,7 +9,7 @@ To install dependencies:
 
     mvn verify
 
-The project uses [JUnit 4](https://junit.org/junit4/).
+The project uses [JUnit](https://junit.org/).
 
 To run the test:
 
