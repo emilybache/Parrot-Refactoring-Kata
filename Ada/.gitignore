@@ -1,0 +1,11 @@
+# Ada object file
+*.o
+*.exe
+obj/
+
+# Ada Library Information
+*.ali
+
+# VSCode
+.vscode/
+
