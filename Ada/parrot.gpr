@@ -1,0 +1,14 @@
+with "aunit";
+
+project Parrot is
+
+   for Languages use ("Ada");
+   for Source_Dirs use (".");
+   for Object_Dir use "obj";
+   for Main use ("run_tests.adb");
+
+   package Ide is
+      for Vcs_Kind use "git";
+   end Ide;
+
+end Parrot;
