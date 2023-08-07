@@ -2,7 +2,7 @@
 
 (asdf:defsystem "parrot-refactoring-kata"
   :description ""
-  :author "King Arthur king@roundtable.org"
+  :author "Monty Python monty.python@legendary.fun"
   :version "1.0.0"
   :depends-on ()
   :pathname "source/"
@@ -13,7 +13,7 @@
 
 (asdf:defsystem "parrot-refactoring-kata/tests"
 		:description "Unit tests for parrot-refactoring-kata"
-                :author "King Arthur king@round-table.org"
+                :author "Monty Python monty.python@legendary.fun"
 		:version "1.0.0"
 		:depends-on ("parrot-refactoring-kata" "parachute" "cl-mock")
 		:pathname "tests/"
