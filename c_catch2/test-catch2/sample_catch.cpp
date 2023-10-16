@@ -1,5 +1,6 @@
 #include "ApprovalTests.hpp"
 #include "catch2/catch.hpp"
+#include <string>
 
 extern "C"
 {
@@ -37,6 +38,31 @@ TEST_CASE ("Parrot") {
     SECTION("Norwegian Blue Not Nailed High Voltage") {
         init_parrot(&parrot, NORWEGIAN_BLUE, 0, 4, false);
         REQUIRE_THAT(get_speed(&parrot), Catch::Matchers::WithinAbs(24.0, 0.001));
+    }
+    SECTION("Cry") {
+        char cry[20];
+        SECTION("European") {
+            init_parrot(&parrot, EUROPEAN, 0, 0, false);
+            get_cry(&parrot, cry);
+            REQUIRE_THAT(std::string(cry), Catch::Equals("Sqoork!"));
+        }
+        SECTION("African") {
+            init_parrot(&parrot, AFRICAN, 0, 0, false);
+            get_cry(&parrot, cry);
+            REQUIRE_THAT(std::string(cry), Catch::Equals("Sqaark!"));
+        }
+        SECTION("Norwegian Blue high voltage") {
+            init_parrot(&parrot, NORWEGIAN_BLUE, 0, 4, false);
+            get_cry(&parrot, cry);
+            REQUIRE_THAT(std::string(cry), Catch::Equals("Bzzzzz"));
+        }
+        SECTION("Norwegian Blue no voltage") {
+            init_parrot(&parrot, NORWEGIAN_BLUE, 0, 0, false);
+            get_cry(&parrot, cry);
+            REQUIRE_THAT(std::string(cry), Catch::Equals("..."));
+        }
+
+
     }
 }
 

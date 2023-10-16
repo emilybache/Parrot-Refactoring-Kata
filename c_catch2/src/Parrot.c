@@ -1,5 +1,7 @@
 #include "Parrot.h"
 #include <assert.h>
+#include <string.h>
+
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
@@ -39,5 +41,26 @@ float get_speed(Parrot* parrot)
         /* Should be unreachable */
         assert(false);
         return -1;
+    }
+}
+
+void get_cry(Parrot *parrot, char* cry) {
+    switch (parrot->type) {
+        case EUROPEAN:
+            strcpy(cry, "Sqoork!");
+            break;
+        case AFRICAN:
+            strcpy(cry, "Sqaark!");
+            break;
+        case NORWEGIAN_BLUE:
+            if (parrot->voltage > 0)
+                strcpy(cry, "Bzzzzz");
+            else
+                strcpy(cry, "...");
+            break;
+        default:
+            /* Should be unreachable */
+            assert(false);
+            break;
     }
 }

@@ -14,3 +14,4 @@ extern void init_parrot(Parrot* parrot,
                         float voltage,
                         bool isNailed);
 extern float get_speed(Parrot* parrot);
+extern void get_cry(Parrot* parrot, char* cry);
