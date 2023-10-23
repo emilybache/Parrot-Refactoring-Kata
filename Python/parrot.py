@@ -28,6 +28,19 @@ class Parrot:
 
         raise ValueError("should be unreachable")
 
+    def cry(self):
+        if self._type == ParrotType.EUROPEAN:
+            return "Sqoork!"
+        if self._type == ParrotType.AFRICAN:
+            return "Sqaark!"
+        if self._type == ParrotType.NORWEGIAN_BLUE:
+            if self._voltage > 0:
+                return "Bzzzzzz"
+            else:
+                return "..."
+
+        raise ValueError("should be unreachable")
+
     def _compute_base_speed_for_voltage(self, voltage):
         return min([24.0, voltage * self._base_speed()])
 
