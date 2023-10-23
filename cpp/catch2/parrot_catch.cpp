@@ -11,14 +11,15 @@ TEST_CASE("Parrot") {
     SECTION("SpeedOfEuropeanParrot")
     {
         parrot = new Parrot(EUROPEAN, 0, 0, false);
-        REQUIRE(parrot->getSpeed() == Approx(12.0));
-
+        CHECK(parrot->getSpeed() == Approx(12.0));
+        CHECK(parrot->getCry() == "Sqoork!");
     }
 
     SECTION("SpeedOfAfricanParrot_With_One_Coconut")
     {
         parrot = new Parrot(AFRICAN, 1, 0, false);
-        REQUIRE(parrot->getSpeed() == Approx(3.0));
+        CHECK(parrot->getSpeed() == Approx(3.0));
+        CHECK(parrot->getCry() == "Squaark!");
     }
 
     SECTION("SpeedOfAfricanParrot_With_Two_Coconuts")
@@ -35,8 +36,9 @@ TEST_CASE("Parrot") {
 
     SECTION("SpeedNorwegianBlueParrot_nailed")
     {
-        parrot = new Parrot(NORWEGIAN_BLUE, 0, 1.5, true);
-        REQUIRE(parrot->getSpeed() == Approx(0.0));
+        parrot = new Parrot(NORWEGIAN_BLUE, 0, 0, true);
+        CHECK(parrot->getSpeed() == Approx(0.0));
+        CHECK(parrot->getCry() == "...");
     }
 
     SECTION("SpeedNorwegianBlueParrot_not_nailed")
@@ -48,7 +50,8 @@ TEST_CASE("Parrot") {
     SECTION("SpeedNorwegianBlueParrot_not_nailed_high_voltage")
     {
         parrot = new Parrot(NORWEGIAN_BLUE, 0, 4, false);
-        REQUIRE(parrot->getSpeed() == Approx(24.0));
+        CHECK(parrot->getSpeed() == Approx(24.0));
+        CHECK(parrot->getCry() == "Bzzzzzz");
     }
     delete parrot;
 }

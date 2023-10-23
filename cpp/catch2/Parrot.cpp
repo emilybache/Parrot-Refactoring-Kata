@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <algorithm>
+#include <string>
 
 #include "Parrot.h"
 
@@ -16,6 +17,20 @@ double Parrot::getSpeed() {
             return max(0.0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
         case NORWEGIAN_BLUE:
             return (isNailed) ? 0 : getBaseSpeed(voltage);
+        default:
+            throw std::invalid_argument("Should be unreachable");
+    }
+}
+
+const string Parrot::getCry() {
+    std::string cry;
+    switch (parrotType) {
+        case EUROPEAN:
+            return "Sqoork!";
+        case AFRICAN:
+            return "Squaark!";
+        case NORWEGIAN_BLUE:
+            return (voltage > 0) ? "Bzzzzzz" : "...";
         default:
             throw std::invalid_argument("Should be unreachable");
     }

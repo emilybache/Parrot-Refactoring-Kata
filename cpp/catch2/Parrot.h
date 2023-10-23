@@ -8,6 +8,7 @@ public:
     Parrot(ParrotType parrotType, int numberOfCoconuts, double voltage, bool isNailed);
 
     double getSpeed();
+    const std::string getCry();
 private:
     ParrotType parrotType;
     int numberOfCoconuts;
