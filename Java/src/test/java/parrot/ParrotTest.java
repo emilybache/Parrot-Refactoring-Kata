@@ -1,5 +1,6 @@
 package parrot;
 
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,7 +12,6 @@ public class ParrotTest {
         Parrot parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
         assertEquals(12.0, parrot.getSpeed(), 0.0);
     }
-
     @Test
     public void getSpeedOfAfricanParrot_With_One_Coconut() {
         Parrot parrot = new Parrot(ParrotTypeEnum.AFRICAN, 1, 0, false);
@@ -46,5 +46,28 @@ public class ParrotTest {
     public void getSpeedNorwegianBlueParrot_not_nailed_high_voltage() {
         Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
         assertEquals(24.0, parrot.getSpeed(), 0.0);
+    }
+
+    @Test
+    public void getCryOfEuropeanParrot() {
+        Parrot parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
+        assertEquals("Sqoork!", parrot.getCry());
+    }
+
+    @Test
+    public void getCryOfAfricanParrot() {
+        Parrot parrot = new Parrot(ParrotTypeEnum.AFRICAN, 1, 0, false);
+        assertEquals("Sqaark!", parrot.getCry());
+    }
+    @Test
+    public void getCryOfNorwegianBlueHighVoltage() {
+        Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
+        assertEquals("Bzzzzzz", parrot.getCry());
+    }
+
+    @Test
+    public void getCryOfNorwegianBlueNoVoltage() {
+        Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
+        assertEquals("...", parrot.getCry());
     }
 }
