@@ -32,6 +32,16 @@ class Parrot
         };
     }
 
+    public function getCry(): string
+    {
+        return match ($this->type) {
+            ParrotTypeEnum::EUROPEAN => 'Sqoork!',
+            ParrotTypeEnum::AFRICAN => 'Sqaark!',
+            ParrotTypeEnum::NORWEGIAN_BLUE => $this->voltage > 0 ? 'Bzzzzzz' : '...',
+            default => throw new Exception('Should be unreachable'),
+        };
+    }
+
     private function getBaseSpeedWith(float $voltage): float
     {
         return min(24.0, $voltage * $this->getBaseSpeed());
@@ -45,15 +55,5 @@ class Parrot
     private function getBaseSpeed(): float
     {
         return 12.0;
-    }
-
-    public function getCry(): string
-    {
-        return match ($this->type) {
-            ParrotTypeEnum::EUROPEAN => 'Sqoork!',
-            ParrotTypeEnum::AFRICAN => 'Sqaark!',
-            ParrotTypeEnum::NORWEGIAN_BLUE => $this->voltage > 0 ? 'Bzzzzzz' : '...',
-            default => throw new Exception('Should be unreachable'),
-        };
     }
 }
