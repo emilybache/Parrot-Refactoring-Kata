@@ -32,6 +32,9 @@ class Parrot
         };
     }
 
+    /**
+     * @throws Exception
+     */
     public function getCry(): string
     {
         return match ($this->type) {
