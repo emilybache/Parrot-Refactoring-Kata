@@ -24,4 +24,13 @@ open class Parrot(
         get() = 12.0
 
     private fun getBaseSpeed(voltage: Double): Double = min(24.0, voltage * baseSpeed)
+
+    val cry: String
+        get() = when (type) {
+            ParrotTypeEnum.EUROPEAN -> "Sqoork!"
+            ParrotTypeEnum.AFRICAN -> "Sqaark!"
+            ParrotTypeEnum.NORWEGIAN_BLUE ->
+                if (voltage > 0) "Bzzzzzz"
+                else "..."
+        }
 }

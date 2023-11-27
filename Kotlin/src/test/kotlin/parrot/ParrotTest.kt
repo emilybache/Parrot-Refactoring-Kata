@@ -47,4 +47,28 @@ class ParrotTest {
         val parrot = Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4.0, false)
         assertEquals(24.0, parrot.speed, 0.0)
     }
+
+    @Test
+    fun getCryOfEuropeanParrot() {
+        val parrot = Parrot(ParrotTypeEnum.EUROPEAN, 0, 0.0, false)
+        assertEquals("Sqoork!", parrot.cry)
+    }
+
+    @Test
+    fun getCryOfAfricanParrot() {
+        val parrot = Parrot(ParrotTypeEnum.AFRICAN, 1, 0.0, false)
+        assertEquals("Sqaark!", parrot.cry)
+    }
+
+    @Test
+    fun getCryOfNorwegianBlue_high_voltage() {
+        val parrot = Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4.0, false)
+        assertEquals("Bzzzzzz", parrot.cry)
+    }
+
+    @Test
+    fun getCryOfNorwegianBlue_no_voltage() {
+        val parrot = Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0.0, false)
+        assertEquals("...", parrot.cry)
+    }
 }
