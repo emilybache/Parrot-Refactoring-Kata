@@ -24,6 +24,15 @@ impl<'a> Parrot<'a> {
             _ => Err("Should be unreachable!")
         }
     }
+
+    pub(crate) fn get_cry(&self) -> Result<&str, &'static str> {
+        match self.parrot_type {
+            "european_parrot" => Ok("Sqoork!"),
+            "african_parrot" => Ok("Sqaark!"),
+            "norwegian_blue_parrot" => if self.voltage > 0.0 { Ok("Bzzzzzz") } else { Ok("...") },
+            _ => Err("Should be unreachable!")
+        }
+    }
 }
 
 fn compute_base_speed_for_voltage(voltage: f32) -> f32 {
@@ -107,5 +116,53 @@ mod tests {
                               voltage: 4.0,
                               nailed: false };
         assert_eq!(parrot.speed().unwrap(), 24.0);
+    }
+
+    #[test]
+    fn get_cry_of_european_parrot()
+    {
+        let parrot = Parrot {
+            parrot_type: "european_parrot",
+            number_of_coconuts: 0,
+            voltage: 0.0,
+            nailed: false,
+        };
+        assert_eq!(parrot.get_cry().unwrap(), "Sqoork!");
+    }
+
+    #[test]
+    fn get_cry_of_african_parrot()
+    {
+        let parrot = Parrot {
+            parrot_type: "african_parrot",
+            number_of_coconuts: 0,
+            voltage: 0.0,
+            nailed: false,
+        };
+        assert_eq!(parrot.get_cry().unwrap(), "Sqaark!");
+    }
+
+    #[test]
+    fn get_cry_norwegian_blue_parrot_high_voltage()
+    {
+        let parrot = Parrot {
+            parrot_type: "norwegian_blue_parrot",
+            number_of_coconuts: 0,
+            voltage: 4.0,
+            nailed: false,
+        };
+        assert_eq!(parrot.get_cry().unwrap(), "Bzzzzzz");
+    }
+
+    #[test]
+    fn get_cry_norwegian_blue_parrot_no_voltage()
+    {
+        let parrot = Parrot {
+            parrot_type: "norwegian_blue_parrot",
+            number_of_coconuts: 0,
+            voltage: 0.0,
+            nailed: false,
+        };
+        assert_eq!(parrot.get_cry().unwrap(), "...");
     }
 }
