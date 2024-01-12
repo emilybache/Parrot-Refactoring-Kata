@@ -5,14 +5,12 @@ namespace Parrot
 {
     public abstract class Parrot
     {
-        protected readonly int _numberOfCoconuts;
         protected readonly ParrotTypeEnum _type;
         protected readonly double _voltage;
 
-        protected Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage)
+        protected Parrot(ParrotTypeEnum type, double voltage)
         {
             _type = type;
-            _numberOfCoconuts = numberOfCoconuts;
             _voltage = voltage;
         }
 
@@ -22,13 +20,13 @@ namespace Parrot
             switch (type)
             {
                 case ParrotTypeEnum.EUROPEAN:
-                    parrot = new EuropeanParrot(numberOfCoconuts, voltage);
+                    parrot = new EuropeanParrot(voltage);
                     break;
                 case ParrotTypeEnum.AFRICAN:
                     parrot = new AfricanParrot(numberOfCoconuts, voltage);
                     break;
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
-                    parrot = new NorwegianBlueParrot(numberOfCoconuts, voltage, isNailed);
+                    parrot = new NorwegianBlueParrot(voltage, isNailed);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

@@ -4,10 +4,12 @@ namespace Parrot;
 
 public class AfricanParrot : Parrot
 {
+    protected int _numberOfCoconuts;
+
     public AfricanParrot(int numberOfCoconuts, double voltage) : 
-        base(ParrotTypeEnum.AFRICAN, numberOfCoconuts, voltage)
+        base(ParrotTypeEnum.AFRICAN, voltage)
     {
-            
+        _numberOfCoconuts = numberOfCoconuts;
     }
 
     public override double GetSpeed()
