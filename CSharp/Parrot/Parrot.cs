@@ -27,7 +27,7 @@ namespace Parrot
                     parrot = new EuropeanParrot(numberOfCoconuts, voltage, isNailed);
                     break;
                 case ParrotTypeEnum.AFRICAN:
-                    parrot = new Parrot(type, numberOfCoconuts, voltage, isNailed);
+                    parrot = new AfricanParrot(numberOfCoconuts, voltage, isNailed);
                     break;
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
                     parrot = new Parrot(type, numberOfCoconuts, voltage, isNailed);
