@@ -30,7 +30,7 @@ namespace Parrot
                     parrot = new AfricanParrot(numberOfCoconuts, voltage, isNailed);
                     break;
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
-                    parrot = new Parrot(type, numberOfCoconuts, voltage, isNailed);
+                    parrot = new NorwegianBlueParrot(numberOfCoconuts, voltage, isNailed);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
