@@ -1,2 +1,5 @@
-bin
-obj
+.vs
+*/bin
+*/obj
+*/packages
+**/*sln.DotSettings.user
