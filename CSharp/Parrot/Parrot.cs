@@ -6,12 +6,10 @@ namespace Parrot
     public abstract class Parrot
     {
         protected readonly ParrotTypeEnum _type;
-        protected readonly double _voltage;
 
-        protected Parrot(ParrotTypeEnum type, double voltage)
+        protected Parrot(ParrotTypeEnum type)
         {
             _type = type;
-            _voltage = voltage;
         }
 
         public static Parrot CreateParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
@@ -20,10 +18,10 @@ namespace Parrot
             switch (type)
             {
                 case ParrotTypeEnum.EUROPEAN:
-                    parrot = new EuropeanParrot(voltage);
+                    parrot = new EuropeanParrot();
                     break;
                 case ParrotTypeEnum.AFRICAN:
-                    parrot = new AfricanParrot(numberOfCoconuts, voltage);
+                    parrot = new AfricanParrot(numberOfCoconuts);
                     break;
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
                     parrot = new NorwegianBlueParrot(voltage, isNailed);

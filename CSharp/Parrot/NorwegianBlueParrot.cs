@@ -5,11 +5,13 @@ namespace Parrot;
 public class NorwegianBlueParrot : Parrot
 {
     protected bool _isNailed;
+    protected double _voltage;
 
     public NorwegianBlueParrot(double voltage, bool isNailed) : 
-        base(ParrotTypeEnum.NORWEGIAN_BLUE, voltage)
+        base(ParrotTypeEnum.NORWEGIAN_BLUE)
     {
         _isNailed = isNailed;
+        _voltage = voltage;
     }
 
     public override double GetSpeed()

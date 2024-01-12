@@ -4,8 +4,8 @@ namespace Parrot;
 
 public class EuropeanParrot : Parrot
 {
-    public EuropeanParrot(double voltage) : 
-        base(ParrotTypeEnum.EUROPEAN, voltage)
+    public EuropeanParrot() : 
+        base(ParrotTypeEnum.EUROPEAN)
     {
             
     }
