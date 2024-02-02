@@ -6,7 +6,6 @@ class ParrotType(Enum):  # If it is not available, just remove it.
     AFRICAN = 2
     NORWEGIAN_BLUE = 3
 
-
 class Parrot:
 
     def __init__(self, type_of_parrot, number_of_coconuts, voltage, nailed):
@@ -49,3 +48,7 @@ class Parrot:
 
     def _base_speed(self):
         return 12.0
+
+
+def create_parrot(type_of_parrot=ParrotType.EUROPEAN, number_of_coconuts=0, voltage=0, nailed=False):
+    return Parrot(type_of_parrot, number_of_coconuts, voltage, nailed)
