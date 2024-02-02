@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace Parrot
 {
-    public abstract class Parrot
+    public class Parrot
     {
-        protected readonly bool _isNailed;
-        protected readonly int _numberOfCoconuts;
-        protected readonly ParrotTypeEnum _type;
-        protected readonly double _voltage;
+        private readonly bool _isNailed;
+        private readonly int _numberOfCoconuts;
+        private readonly ParrotTypeEnum _type;
+        private readonly double _voltage;
 
-        protected Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
+        public Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
         {
             _type = type;
             _numberOfCoconuts = numberOfCoconuts;
@@ -18,44 +18,54 @@ namespace Parrot
             _isNailed = isNailed;
         }
 
-        public static Parrot CreateParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
+        public double GetSpeed()
         {
-            Parrot parrot;
-            switch (type)
+            switch (_type)
             {
                 case ParrotTypeEnum.EUROPEAN:
-                    parrot = new EuropeanParrot(numberOfCoconuts, voltage, isNailed);
-                    break;
+                    return GetBaseSpeed();
                 case ParrotTypeEnum.AFRICAN:
-                    parrot = new AfricanParrot(numberOfCoconuts, voltage, isNailed);
-                    break;
+                    return Math.Max(0, GetBaseSpeed() - GetLoadFactor() * _numberOfCoconuts);
                 case ParrotTypeEnum.NORWEGIAN_BLUE:
-                    parrot = new NorwegianBlueParrot(numberOfCoconuts, voltage, isNailed);
-                    break;
+                    return _isNailed ? 0 : GetBaseSpeed(_voltage);
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                    throw new ArgumentOutOfRangeException();
             }
-
-            return parrot;
         }
 
-        public abstract double GetSpeed();
-
-        protected double GetBaseSpeed(double voltage)
+        private double GetBaseSpeed(double voltage)
         {
             return Math.Min(24.0, voltage * GetBaseSpeed());
         }
 
-        protected double GetLoadFactor()
+        private double GetLoadFactor()
         {
             return 9.0;
         }
 
-        protected double GetBaseSpeed()
+        private double GetBaseSpeed()
         {
             return 12.0;
         }
 
-        public abstract string GetCry();
+        public string GetCry()
+        {
+            string value;
+            switch (_type)
+            {
+                case ParrotTypeEnum.EUROPEAN:
+                    value = "Sqoork!";
+                    break;
+                case ParrotTypeEnum.AFRICAN:
+                    value = "Sqaark!";
+                    break;
+                case ParrotTypeEnum.NORWEGIAN_BLUE:
+                    value = _voltage > 0 ? "Bzzzzzz" : "...";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return value;
+        }
     }
 }
