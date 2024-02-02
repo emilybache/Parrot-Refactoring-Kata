@@ -4,12 +4,6 @@ namespace Parrot;
 
 public class EuropeanParrot : Parrot
 {
-    public EuropeanParrot() : 
-        base(ParrotTypeEnum.EUROPEAN)
-    {
-            
-    }
-
     public override double GetSpeed()
     {
         return GetBaseSpeed();

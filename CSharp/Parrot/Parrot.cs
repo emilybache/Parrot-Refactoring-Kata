@@ -5,13 +5,6 @@ namespace Parrot
 {
     public abstract class Parrot
     {
-        protected readonly ParrotTypeEnum _type;
-
-        protected Parrot(ParrotTypeEnum type)
-        {
-            _type = type;
-        }
-
         public static Parrot CreateParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, bool isNailed)
         {
             Parrot parrot;

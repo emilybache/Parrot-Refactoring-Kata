@@ -6,8 +6,7 @@ public class AfricanParrot : Parrot
 {
     protected int _numberOfCoconuts;
 
-    public AfricanParrot(int numberOfCoconuts) : 
-        base(ParrotTypeEnum.AFRICAN)
+    public AfricanParrot(int numberOfCoconuts)
     {
         _numberOfCoconuts = numberOfCoconuts;
     }

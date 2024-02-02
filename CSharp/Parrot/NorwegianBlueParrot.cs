@@ -8,7 +8,7 @@ public class NorwegianBlueParrot : Parrot
     protected double _voltage;
 
     public NorwegianBlueParrot(double voltage, bool isNailed) : 
-        base(ParrotTypeEnum.NORWEGIAN_BLUE)
+        base()
     {
         _isNailed = isNailed;
         _voltage = voltage;
