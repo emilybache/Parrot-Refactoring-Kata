@@ -1,7 +1,7 @@
 from enum import Enum  # Enum is introduced in Python 3.4.
 
 
-class ParrotType(Enum):
+class ParrotType(Enum): # If Enum is not available in your Python version, remove this
     EUROPEAN = 1
     AFRICAN = 2
     NORWEGIAN_BLUE = 3
@@ -49,7 +49,3 @@ class Parrot:
 
     def _base_speed(self):
         return 12.0
-
-
-def create_parrot(type_of_parrot=ParrotType.EUROPEAN, number_of_coconuts=0, voltage=0, nailed=False):
-    return Parrot(type_of_parrot, number_of_coconuts, voltage, nailed)
