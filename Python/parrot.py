@@ -1,7 +1,7 @@
-from enum import Enum  # Enum is introduced in Python 3.4.
+from enum import Enum
 
 
-class ParrotType(Enum): # If Enum is not available in your Python version, remove this
+class ParrotType(Enum):
     EUROPEAN = 1
     AFRICAN = 2
     NORWEGIAN_BLUE = 3
@@ -16,30 +16,22 @@ class Parrot:
         self._nailed = nailed
 
     def speed(self):
-        if self._type == ParrotType.EUROPEAN:
-            return self._base_speed()
-        if self._type == ParrotType.AFRICAN:
-            return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
-        if self._type == ParrotType.NORWEGIAN_BLUE:
-            if self._nailed:
-                return 0
-            else:
-                return self._compute_base_speed_for_voltage(self._voltage)
-
-        raise ValueError("should be unreachable")
+        match self._type:
+            case ParrotType.EUROPEAN:
+                return self._base_speed()
+            case ParrotType.AFRICAN:
+                return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
+            case ParrotType.NORWEGIAN_BLUE:
+                return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
 
     def cry(self):
-        if self._type == ParrotType.EUROPEAN:
-            return "Sqoork!"
-        if self._type == ParrotType.AFRICAN:
-            return "Sqaark!"
-        if self._type == ParrotType.NORWEGIAN_BLUE:
-            if self._voltage > 0:
-                return "Bzzzzzz"
-            else:
-                return "..."
-
-        raise ValueError("should be unreachable")
+        match self._type:
+            case ParrotType.EUROPEAN:
+                return "Sqoork!"
+            case ParrotType.AFRICAN:
+                return "Sqaark!"
+            case ParrotType.NORWEGIAN_BLUE:
+                return "Bzzzzzz" if self._voltage > 0 else "..."
 
     def _compute_base_speed_for_voltage(self, voltage):
         return min([24.0, voltage * self._base_speed()])
