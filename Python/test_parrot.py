@@ -45,9 +45,11 @@ def test_speedNorwegianBlueParrot_not_nailed_high_voltage():
     parrot = create_parrot(ParrotType.NORWEGIAN_BLUE, 0, 4, False)
     assert parrot.speed() == 24.0
 
+
 def test_cryNorwegianBlueParrot_high_voltage():
     parrot = create_parrot(ParrotType.NORWEGIAN_BLUE, 0, 4, False)
     assert parrot.cry() == "Bzzzzzz"
+
 
 def test_cryNorwegianBlueParrot_no_voltage():
     parrot = create_parrot(ParrotType.NORWEGIAN_BLUE, 0, 0, False)
