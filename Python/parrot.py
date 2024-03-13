@@ -1,7 +1,7 @@
-from enum import Enum  # Enum is introduced in Python 3.4.
+from enum import Enum
 
 
-class ParrotType(Enum): # If Enum is not available in your Python version, remove this
+class ParrotType(Enum):
     EUROPEAN = 1
     AFRICAN = 2
     NORWEGIAN_BLUE = 3
