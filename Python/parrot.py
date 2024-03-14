@@ -9,8 +9,7 @@ class ParrotType(Enum):
 
 class Parrot:
 
-    def __init__(self, number_of_coconuts, voltage, nailed):
-        self._number_of_coconuts = number_of_coconuts
+    def __init__(self, voltage, nailed):
         self._voltage = voltage
         self._nailed = nailed
 
