@@ -12,3 +12,4 @@ class EuropeanParrot(Parrot):
     def cry(self):
         return "Sqoork!"
 
+

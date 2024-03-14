@@ -9,8 +9,5 @@ class ParrotType(Enum):
 
 class Parrot:
 
-    def _load_factor(self):
-        return 9.0
-
     def _base_speed(self):
         return 12.0

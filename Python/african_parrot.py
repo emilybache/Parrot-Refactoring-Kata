@@ -14,3 +14,6 @@ class AfricanParrot(Parrot):
     def cry(self):
         return "Sqaark!"
 
+    def _load_factor(self):
+        return 9.0
+
