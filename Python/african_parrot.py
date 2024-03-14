@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType, _base_speed
+from parrot import _base_speed
 
 
 class AfricanParrot:

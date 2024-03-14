@@ -10,6 +10,3 @@ class ParrotType(Enum):
 def _base_speed():
     return 12.0
 
-
-class Parrot:
-    pass

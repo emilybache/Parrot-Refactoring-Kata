@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType
+from parrot import ParrotType
 from parrot_factory import create_parrot
 
 
