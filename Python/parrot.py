@@ -15,15 +15,6 @@ class Parrot:
         self._voltage = voltage
         self._nailed = nailed
 
-    def speed(self):
-        match self._type:
-            case ParrotType.EUROPEAN:
-                return self._base_speed()
-            case ParrotType.AFRICAN:
-                return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
-            case ParrotType.NORWEGIAN_BLUE:
-                return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
-
     def cry(self):
         match self._type:
             case ParrotType.EUROPEAN:
