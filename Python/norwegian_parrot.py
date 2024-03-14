@@ -8,3 +8,6 @@ class NorwegianBlueParrot(Parrot):
 
     def speed(self):
         return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
+
+    def cry(self):
+        return "Bzzzzzz" if self._voltage > 0 else "..."
