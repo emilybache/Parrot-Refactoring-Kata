@@ -1,3 +1,4 @@
+from african_parrot import AfricanParrot
 from european_parrot import EuropeanParrot
 from parrot import ParrotType, Parrot
 
@@ -8,7 +9,7 @@ def create_parrot(type_of_parrot, number_of_coconuts, voltage, nailed):
             parrot = EuropeanParrot(number_of_coconuts, voltage, nailed)
 
         case ParrotType.AFRICAN:
-            parrot = Parrot(type_of_parrot, number_of_coconuts, voltage, nailed)
+            parrot = AfricanParrot(number_of_coconuts, voltage, nailed)
 
         case ParrotType.NORWEGIAN_BLUE:
             parrot = Parrot(type_of_parrot, number_of_coconuts, voltage, nailed)
