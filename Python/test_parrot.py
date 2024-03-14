@@ -1,4 +1,5 @@
-from parrot import Parrot, ParrotType, create_parrot
+from parrot import Parrot, ParrotType
+from parrot_factory import create_parrot
 
 
 def test_speed_of_european_parrot():
