@@ -9,12 +9,6 @@ class ParrotType(Enum):
 
 class Parrot:
 
-    def __init__(self):
-        pass
-
-    def _compute_base_speed_for_voltage(self, voltage):
-        return min([24.0, voltage * self._base_speed()])
-
     def _load_factor(self):
         return 9.0
 

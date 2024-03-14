@@ -13,3 +13,4 @@ class AfricanParrot(Parrot):
 
     def cry(self):
         return "Sqaark!"
+
