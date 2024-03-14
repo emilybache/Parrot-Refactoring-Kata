@@ -7,10 +7,10 @@ from parrot import ParrotType
 def create_parrot(type_of_parrot, number_of_coconuts, voltage, nailed):
     match type_of_parrot:
         case ParrotType.EUROPEAN:
-            parrot = EuropeanParrot(voltage, nailed)
+            parrot = EuropeanParrot()
 
         case ParrotType.AFRICAN:
-            parrot = AfricanParrot(number_of_coconuts, voltage, nailed)
+            parrot = AfricanParrot(number_of_coconuts)
 
         case ParrotType.NORWEGIAN_BLUE:
             parrot = NorwegianBlueParrot(voltage, nailed)
