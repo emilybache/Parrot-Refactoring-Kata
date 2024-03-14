@@ -1,7 +1,7 @@
 from parrot import Parrot, ParrotType, _base_speed
 
 
-class NorwegianBlueParrot(Parrot):
+class NorwegianBlueParrot:
 
     def __init__(self, voltage, nailed):
         super().__init__()

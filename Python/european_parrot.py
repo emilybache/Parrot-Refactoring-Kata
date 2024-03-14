@@ -1,7 +1,7 @@
 from parrot import Parrot, ParrotType, _base_speed
 
 
-class EuropeanParrot(Parrot):
+class EuropeanParrot:
 
     def __init__(self):
         super().__init__()
