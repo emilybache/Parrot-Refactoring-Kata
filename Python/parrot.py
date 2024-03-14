@@ -7,7 +7,9 @@ class ParrotType(Enum):
     NORWEGIAN_BLUE = 3
 
 
-class Parrot:
+def _base_speed():
+    return 12.0
 
-    def _base_speed(self):
-        return 12.0
+
+class Parrot:
+    pass

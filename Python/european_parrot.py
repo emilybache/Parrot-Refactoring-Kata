@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType
+from parrot import Parrot, ParrotType, _base_speed
 
 
 class EuropeanParrot(Parrot):
@@ -7,7 +7,7 @@ class EuropeanParrot(Parrot):
         super().__init__()
 
     def speed(self):
-        return self._base_speed()
+        return _base_speed()
 
     def cry(self):
         return "Sqoork!"

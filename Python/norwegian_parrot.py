@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType
+from parrot import Parrot, ParrotType, _base_speed
 
 
 class NorwegianBlueParrot(Parrot):
@@ -16,5 +16,5 @@ class NorwegianBlueParrot(Parrot):
         return "Bzzzzzz" if self._voltage > 0 else "..."
 
     def _compute_base_speed_for_voltage(self, voltage):
-        return min([24.0, voltage * self._base_speed()])
+        return min([24.0, voltage * _base_speed()])
 

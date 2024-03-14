@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType
+from parrot import Parrot, ParrotType, _base_speed
 
 
 class AfricanParrot(Parrot):
@@ -9,7 +9,7 @@ class AfricanParrot(Parrot):
 
 
     def speed(self):
-        return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
+        return max(0, _base_speed() - self._load_factor() * self._number_of_coconuts)
 
     def cry(self):
         return "Sqaark!"
