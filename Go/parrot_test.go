@@ -54,3 +54,31 @@ func TestSpeedNorwegianBlueParrot_not_nailed_high_voltage(t *testing.T) {
 	assert.Equal(t, 24.0, speed)
 	assert.NoError(t, err)
 }
+
+func TestGetCryOfEuropeanParrot(t *testing.T) {
+	parrot := CreateParrot(TypeEuropean, 0, 0, false)
+	cry, err := parrot.Cry()
+	assert.Equal(t, "Sqoork!", cry)
+	assert.NoError(t, err)
+}
+
+func TestGetCryOfAfricanParrot(t *testing.T) {
+	parrot := CreateParrot(TypeAfrican, 2, 0, false)
+	cry, err := parrot.Cry()
+	assert.Equal(t, "Sqaark!", cry)
+	assert.NoError(t, err)
+}
+
+func TestGetCryNorwegianBlueParrot_high_voltage(t *testing.T) {
+	parrot := CreateParrot(TypeNorwegianBlue, 0, 4, false)
+	cry, err := parrot.Cry()
+	assert.Equal(t, "Bzzzzzz", cry)
+	assert.NoError(t, err)
+}
+
+func TestGetCryNorwegianBlueParrot_no_voltage(t *testing.T) {
+	parrot := CreateParrot(TypeNorwegianBlue, 0, 0, false)
+	cry, err := parrot.Cry()
+	assert.Equal(t, "...", cry)
+	assert.NoError(t, err)
+}

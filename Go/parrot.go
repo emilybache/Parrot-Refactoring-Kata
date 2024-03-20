@@ -13,9 +13,10 @@ const (
 	TypeNorwegianBlue parrotType = 3
 )
 
-// Parrot has a Speed.
+// Parrot has a Speed and Cry.
 type Parrot interface {
 	Speed() (float64, error)
+	Cry() (string, error)
 }
 
 type mixedParrot struct {
@@ -58,4 +59,23 @@ func (parrot mixedParrot) loadFactor() float64 {
 
 func (parrot mixedParrot) baseSpeed() float64 {
 	return 12.0
+}
+
+func (parrot mixedParrot) Cry() (string, error) {
+	switch parrot._type {
+	case TypeEuropean:
+		return "Sqoork!", nil
+
+	case TypeAfrican:
+		return "Sqaark!", nil
+
+	case TypeNorwegianBlue:
+		if parrot.voltage > 0 {
+			return "Bzzzzzz", nil
+		}
+		return "...", nil
+
+	default:
+		return "", errors.New("should be unreachable")
+	}
 }
