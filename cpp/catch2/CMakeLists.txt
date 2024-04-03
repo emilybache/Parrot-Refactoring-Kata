@@ -23,7 +23,7 @@ set(SOURCE_FILES main.cpp parrot_catch.cpp)
 FetchContent_Declare(
         Catch2
         GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG        v2.13.1
+        GIT_TAG        v2.13.10
         GIT_SHALLOW    1
 )
 FetchContent_MakeAvailable(Catch2)
@@ -32,7 +32,7 @@ FetchContent_MakeAvailable(Catch2)
 FetchContent_Declare(
         ApprovalTests
         GIT_REPOSITORY https://github.com/approvals/ApprovalTests.cpp
-        GIT_TAG        v.10.5.1
+        GIT_TAG        v.10.13.0
         GIT_SHALLOW    1
 )
 FetchContent_MakeAvailable(ApprovalTests)
