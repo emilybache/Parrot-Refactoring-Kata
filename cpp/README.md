@@ -1,16 +1,7 @@
 Parrot in C++
-=============
+==============
 
-Translation(s) of [Parrot Refactoring Kata](https://github.com/emilybache/Parrot-Refactoring-Kata)
+There are three test projects here, using the popular test frameworks [Catch2](https://github.com/catchorg/Catch2, [Doctest](https://github.com/doctest/doctest) and [GoogleTest](http://google.github.io/googletest/) respectively. Choose the one you prefer. You could use [Approvals](https://approvaltestscpp.readthedocs.io/en/latest/index.html) with any of them.
 
-CMake
------
+Refer to [top level README](../README.md) for exercise instructions.
 
-CMake is included in CLion from JetBrains. Without CMake files
-CLion has a hard time to handle c-projects.
-
-To install CMake (if you don't use CLion) on macOS using brew
-
-    brew install cmake
-
-Tested on CMake 3.15.3 (included with CLion 2019.3) on 	macOS
