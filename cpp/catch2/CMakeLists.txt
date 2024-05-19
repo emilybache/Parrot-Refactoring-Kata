@@ -7,6 +7,8 @@ project(Parrot VERSION 1.0
 # uncomment these lines to enable coverage measurements using gcov
 #set(CMAKE_CXX_FLAGS "--coverage")
 
+set(CMAKE_CXX_STANDARD 20)
+
 enable_testing()
 
 set(SRC_LIB_NAME .)
