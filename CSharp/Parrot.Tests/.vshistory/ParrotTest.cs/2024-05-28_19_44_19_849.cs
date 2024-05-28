@@ -100,7 +100,7 @@ namespace Parrot.Tests
             Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
             Assert.Equal("...", parrot.GetCry());
             NorwegianParrot norwegianParrot = new NorwegianParrot(0, false);
-            Assert.Equal("...", norwegianParrot.GetCry());
+            Assert.Equal("Bzzzzzz", norwegianParrot.GetCry());
         }
     }
 }

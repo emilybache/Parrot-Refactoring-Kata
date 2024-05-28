@@ -16,19 +16,15 @@ namespace Parrot.Tests
         [Fact]
         public void GetSpeedNorwegianBlueParrot_not_nailed()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 1.5, false);
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 1.5, false);
             Assert.Equal(18.0, parrot.GetSpeed());
-            NorwegianParrot norwegianParrot = new NorwegianParrot(1.5, false);
-            Assert.Equal(18.0, norwegianParrot.GetSpeed());
         }
 
         [Fact]
         public void GetSpeedNorwegianBlueParrot_not_nailed_high_voltage()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
             Assert.Equal(24.0, parrot.GetSpeed());
-            NorwegianParrot norwegianParrot = new NorwegianParrot(4, false);
-            Assert.Equal(24.0, norwegianParrot.GetSpeed());
         }
 
         [Fact]
@@ -70,10 +66,8 @@ namespace Parrot.Tests
         [Fact]
         public void GetCryOfEuropeanParrot()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
+            var parrot = new Parrot(ParrotTypeEnum.EUROPEAN, 0, 0, false);
             Assert.Equal("Sqoork!", parrot.GetCry());
-            EuropeanParrot europeanParrot = new EuropeanParrot();
-            Assert.Equal("Sqoork!", europeanParrot.GetCry());
         }
 
         [Fact]
@@ -88,19 +82,15 @@ namespace Parrot.Tests
         [Fact]
         public void GetCryNorwegianBlueParrot_high_voltage()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 4, false);
             Assert.Equal("Bzzzzzz", parrot.GetCry());
-            NorwegianParrot norwegianParrot = new NorwegianParrot(4, false);
-            Assert.Equal("Bzzzzzz", norwegianParrot.GetCry());
         }
 
         [Fact]
         public void GetCryNorwegianBlueParrot_no_voltage()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
             Assert.Equal("...", parrot.GetCry());
-            NorwegianParrot norwegianParrot = new NorwegianParrot(0, false);
-            Assert.Equal("...", norwegianParrot.GetCry());
         }
     }
 }

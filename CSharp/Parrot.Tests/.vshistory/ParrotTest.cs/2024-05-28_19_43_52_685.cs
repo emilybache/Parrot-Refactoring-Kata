@@ -97,10 +97,8 @@ namespace Parrot.Tests
         [Fact]
         public void GetCryNorwegianBlueParrot_no_voltage()
         {
-            Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
+            var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 0, false);
             Assert.Equal("...", parrot.GetCry());
-            NorwegianParrot norwegianParrot = new NorwegianParrot(0, false);
-            Assert.Equal("...", norwegianParrot.GetCry());
         }
     }
 }
