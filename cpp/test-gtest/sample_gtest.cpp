@@ -9,6 +9,7 @@ TEST(ParrotTest, SpeedOfEuropeanParrot) {
     auto parrot = make_unique<Parrot>(EUROPEAN, 0, 0, false);
     EXPECT_NEAR(12.0, parrot->getSpeed(), 0.0);
 }
+
 TEST(ParrotTest, CryOfEuropeanParrot) {
     auto parrot = make_unique<Parrot>(EUROPEAN, 0, 0, false);
     EXPECT_EQ("Sqoork!", parrot->getCry());
@@ -43,6 +44,7 @@ TEST(ParrotTest, CryNorwegianBlueParrot_no_voltage) {
     auto parrot = make_unique<Parrot>(NORWEGIAN_BLUE, 0, 0, true);
     EXPECT_EQ("...", parrot->getCry());
 }
+
 TEST(ParrotTest, CryNorwegianBlueParrot_high_voltage) {
     auto parrot = make_unique<Parrot>(NORWEGIAN_BLUE, 0, 24, true);
     EXPECT_EQ("Bzzzzzz", parrot->getCry());
