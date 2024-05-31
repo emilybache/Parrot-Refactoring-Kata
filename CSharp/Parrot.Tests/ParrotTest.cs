@@ -12,7 +12,7 @@ namespace Parrot.Tests
         }
 
         [Fact]
-        public void GetSpeedNorwegianBlueParrot_nailed_withVoltage()
+        public void GetSpeedNorwegianBlueParrot_nailed_with_voltage()
         {
             var parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, 1.5, true);
             Assert.Equal(0.0, parrot.GetSpeed());
