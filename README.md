@@ -15,8 +15,6 @@ I made a [video explaining this kata](https://youtu.be/UxNEHKg_2eA), and videos 
 
 There is also a Guided Learning Hour using this exercise: [Everyday Design Improvements in OO Code](https://youtu.be/NCEWAqEFPic)
 
-How to use this video: ➡️ https://youtu.be/7dnKYg4lkzI
-
 Acknowlegements
 ---------------
 
