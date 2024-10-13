@@ -1,3 +1,4 @@
+@testable import Parrot
 import XCTest
 
 class ParrotTests: XCTestCase {
