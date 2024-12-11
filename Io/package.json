@@ -1,0 +1,15 @@
+{
+  "name": "Parrot-Refactoring-Kata",
+  "version": "0.1.0",
+  "readme": "README.md",
+  "protos": [
+    "Parrot",
+    "ParrotType"
+  ],
+  "dependencies": {
+    "libs": [],
+    "headers": [],
+    "protos": [],
+    "packages": []
+  }
+}
