@@ -1,5 +1,5 @@
-import 'package:dart/parrot_type.dart';
-import 'package:dart/parrot.dart';
+import 'package:parrot_refactoring_kata/parrot_type.dart';
+import 'package:parrot_refactoring_kata/parrot.dart';
 import 'package:test/test.dart';
 
 void main() {

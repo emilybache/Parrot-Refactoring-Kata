@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:dart/parrot_type.dart';
+import 'package:parrot_refactoring_kata/parrot_type.dart';
 
 class Parrot {
   final ParrotType type;
