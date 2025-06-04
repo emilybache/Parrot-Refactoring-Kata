@@ -4,3 +4,4 @@
 .buildpath
 .loadpath
 .settings
+Gemfile.lock
