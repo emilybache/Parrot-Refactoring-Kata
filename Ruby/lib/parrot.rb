@@ -20,6 +20,19 @@ class Parrot
     throw "Should be unreachable!"
   end
 
+  def cry
+    case @type
+    when :european_parrot
+      return "Sqoork!"
+    when :african_parrot
+      return "Sqaark!"
+    when :norwegian_blue_parrot
+      return @voltage > 0 ? "Bzzzzzz" : "..."
+    end
+
+    throw "Should be unreachable!"
+  end
+
   private
 
   def compute_base_speed_for_voltage voltage

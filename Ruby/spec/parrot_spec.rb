@@ -35,4 +35,24 @@ describe "Parrots" do
     parrot = Parrot.new(:norwegian_blue_parrot, 0, 4, false)
     expect(parrot.speed).to eq(24.0)
   end
+
+  it "gets cry of a European parrot" do
+    parrot = Parrot.new(:european_parrot, 0, 0, false)
+    expect(parrot.cry).to eq("Sqoork!")
+  end
+
+  it "gets cry of an African parrot" do
+    parrot = Parrot.new(:african_parrot, 1, 0, false)
+    expect(parrot.cry).to eq("Sqaark!")
+  end
+
+  it "gets cry of a Norwegian blue parrot with high voltage" do
+    parrot = Parrot.new(:norwegian_blue_parrot, 0, 4, false)
+    expect(parrot.cry).to eq("Bzzzzzz")
+  end
+
+  it "gets cry of a Norwegian blue parrot with no voltage" do
+    parrot = Parrot.new(:norwegian_blue_parrot, 0, 0, false)
+    expect(parrot.cry).to eq("...")
+  end
 end
