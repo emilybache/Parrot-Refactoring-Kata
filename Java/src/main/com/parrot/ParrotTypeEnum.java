@@ -1,4 +1,4 @@
-package parrot;
+package com.parrot;
 
 public enum ParrotTypeEnum {
 
