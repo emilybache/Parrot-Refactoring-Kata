@@ -11,7 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>22</maven.compiler.release>
 
-        <junit.jupiter.version>5.11.4</junit.jupiter.version>
+        <junit.jupiter.version>6.0.1</junit.jupiter.version>
     </properties>
 
     <dependencies>
@@ -19,12 +19,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.jupiter.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.11.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
