@@ -8,6 +8,7 @@
     "outDir": "./build/",
     "noEmitOnError": true,
     "strict": true,
+    "isolatedModules": true,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
