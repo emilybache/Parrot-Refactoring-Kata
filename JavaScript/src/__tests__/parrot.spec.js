@@ -26,6 +26,12 @@ describe("Parrot", function () {
     });
 
     test("get speed norwegian blue parrot nailed", function () {
+        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 0, true);
+
+        expect(parrot.getSpeed()).toBe(0);
+    });
+
+    test("get speed norwegian blue parrot nailed with voltage", function () {
         const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 1.5, true);
 
         expect(parrot.getSpeed()).toBe(0);
@@ -41,5 +47,29 @@ describe("Parrot", function () {
         const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 4, false);
 
         expect(parrot.getSpeed()).toBe(24);
+    });
+
+    test("get cry of european parrot", function () {
+        const parrot = new Parrot(PARROT_TYPES.EUROPEAN, 0, 0, false);
+
+        expect(parrot.getCry()).toBe("Sqoork!");
+    });
+
+    test("get cry of african parrot", function () {
+        const parrot = new Parrot(PARROT_TYPES.AFRICAN, 2, 0, false);
+
+        expect(parrot.getCry()).toBe("Sqaark!");
+    });
+
+    test("get cry norwegian blue parrot high voltage", function () {
+        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 4, false);
+
+        expect(parrot.getCry()).toBe("Bzzzzzz");
+    });
+
+    test("get cry norwegian blue parrot no voltage", function () {
+        const parrot = new Parrot(PARROT_TYPES.NORWEGIAN_BLUE, 0, 0, false);
+
+        expect(parrot.getCry()).toBe("...");
     });
 });

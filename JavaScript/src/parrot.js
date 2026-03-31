@@ -35,4 +35,16 @@ export class Parrot {
     getBaseSpeed() {
         return 12;
     }
+
+    getCry() {
+        switch (this.type) {
+            case PARROT_TYPES.EUROPEAN:
+                return "Sqoork!";
+            case PARROT_TYPES.AFRICAN:
+                return "Sqaark!";
+            case PARROT_TYPES.NORWEGIAN_BLUE:
+                return this.voltage > 0 ? "Bzzzzzz" : "...";
+        }
+        throw new Error("Should be unreachable");
+    }
 }
