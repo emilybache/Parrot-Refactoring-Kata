@@ -1,4 +1,4 @@
-from parrot import Parrot, ParrotType, EuropeanParrot, AfricanParrot, NorwegianBlueParrot
+from parrot import EuropeanParrot, AfricanParrot, NorwegianBlueParrot
 
 
 def test_speed_of_european_parrot():
