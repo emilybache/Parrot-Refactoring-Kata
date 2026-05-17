@@ -1,4 +1,5 @@
 from enum import Enum
+from abc import ABC, abstractmethod
 
 
 class ParrotType(Enum):
@@ -7,7 +8,7 @@ class ParrotType(Enum):
     NORWEGIAN_BLUE = 3
 
 
-class Parrot:
+class Parrot(ABC):
 
     def __init__(self, type_of_parrot, number_of_coconuts, voltage, nailed):
         self._type = type_of_parrot
@@ -15,23 +16,13 @@ class Parrot:
         self._voltage = voltage
         self._nailed = nailed
 
+    @abstractmethod
     def speed(self):
-        match self._type:
-            case ParrotType.EUROPEAN:
-                return self._base_speed()
-            case ParrotType.AFRICAN:
-                return max(0, self._base_speed() - self._load_factor() * self._number_of_coconuts)
-            case ParrotType.NORWEGIAN_BLUE:
-                return 0 if self._nailed else self._compute_base_speed_for_voltage(self._voltage)
+        pass
 
+    @abstractmethod
     def cry(self):
-        match self._type:
-            case ParrotType.EUROPEAN:
-                return "Sqoork!"
-            case ParrotType.AFRICAN:
-                return "Sqaark!"
-            case ParrotType.NORWEGIAN_BLUE:
-                return "Bzzzzzz" if self._voltage > 0 else "..."
+        pass
 
     def _compute_base_speed_for_voltage(self, voltage):
         return min([24.0, voltage * self._base_speed()])
